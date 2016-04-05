@@ -45,15 +45,15 @@ progpath="$0"
 M4SH_VERBATIM([[
 : ${CP="cp -f"}
 test "${ECHO+set}" = set || ECHO=${as_echo-'printf %s\n'}
-: ${EGREP="@EGREP@"}
-: ${FGREP="@FGREP@"}
-: ${GREP="@GREP@"}
-: ${LN_S="@LN_S@"}
+: ${EGREP="egrep"}
+: ${FGREP="fgrep"}
+: ${GREP="grep"}
+: ${LN_S="ln -s"}
 : ${MAKE="make"}
 : ${MKDIR="mkdir"}
 : ${MV="mv -f"}
 : ${RM="rm -f"}
-: ${SED="@SED@"}
+: ${SED="sed"}
 : ${SHELL="${CONFIG_SHELL-/bin/sh}"}
 : ${Xsed="$SED -e 1s/^X//"}
 
