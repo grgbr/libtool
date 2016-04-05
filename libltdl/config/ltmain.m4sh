@@ -7289,8 +7289,10 @@ EOF
 	      else
                 # We only want to hardcode in an rpath if it isn't in the
                 # default dlsearch path.
+                func_normal_abspath "$libdir"
+                libdir_norm=$func_normal_abspath_result
 	        case " $sys_lib_dlsearch_path " in
-	        *" $libdir "*) ;;
+	        *" $libdir_norm "*) ;;
 	        *) eval flag=\"$hardcode_libdir_flag_spec\"
                    func_append dep_rpath " $flag"
                    ;;
@@ -8028,8 +8030,10 @@ EOF
 	  else
             # We only want to hardcode in an rpath if it isn't in the
             # default dlsearch path.
+            func_normal_abspath "$libdir"
+            libdir_norm=$func_normal_abspath_result
 	    case " $sys_lib_dlsearch_path " in
-	    *" $libdir "*) ;;
+	    *" $libdir_norm "*) ;;
 	    *) eval flag=\"$hardcode_libdir_flag_spec\"
                rpath+=" $flag"
                ;;
